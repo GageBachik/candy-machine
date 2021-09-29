@@ -52,7 +52,7 @@ export async function upload(
   existingInCache.forEach(f => {
     if (!seen[f]) {
       seen[f] = true;
-      newFiles.push(f + '.gif');
+      newFiles.push(f + '.png');
     }
   });
 
@@ -82,8 +82,8 @@ export async function upload(
       const manifestContent = fs
         .readFileSync(manifestPath)
         .toString()
-        .replace(imageName, 'image.gif')
-        .replace(imageName, 'image.gif');
+        .replace(imageName, 'image.png')
+        .replace(imageName, 'image.png');
       const manifest = JSON.parse(manifestContent);
 
       const manifestBuffer = Buffer.from(JSON.stringify(manifest));

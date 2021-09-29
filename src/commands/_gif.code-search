@@ -1,0 +1,24 @@
+# Query: .gif
+# ContextLines: 1
+
+5 results - 3 files
+
+src/commands/upload.ts:
+  54        seen[f] = true;
+  55:       newFiles.push(f + '.png');
+  56      }
+
+  84          .toString()
+  85:         .replace(imageName, 'image.png')
+  86:         .replace(imageName, 'image.png');
+  87        const manifest = JSON.parse(manifestContent);
+
+src/helpers/constants.ts:
+  44  
+  45: export const EXTENSION_PNG = '.png';
+  46  export const EXTENSION_JSON = '.json';
+
+src/helpers/upload/arweave.ts:
+  54    data.append('file[]', fs.createReadStream(image), {
+  55:     filename: `image.png`,
+  56      contentType: 'image/gif',
